@@ -1,0 +1,132 @@
+{
+  prefixes: {
+    cpsv: "http://purl.org/vocab/cpsv#",
+    dcterms: "http://purl.org/dc/terms/",
+    eli: "http://data.europa.eu/eli/ontology#",
+    eu: "http://data.europa.eu/m8g/",
+    foaf: "http://xmlns.com/foaf/0.1/",
+    rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    rdfs: "http://www.w3.org/2000/01/rdf-schema#",
+    rov: "http://www.w3.org/ns/regorg#",
+    locn: "http://www.w3.org/ns/locn#",
+    org: "http://www.w3.org/ns/org#",
+    owl: "http://www.w3.org/2002/07/owl#",
+    person: "http://www.w3.org/ns/person#",
+    prov: "http://www.w3.org/ns/prov#",
+    schema: "http://schema.org/",
+    skos: "http://www.w3.org/2004/02/skos/core#",
+    vann: "http://purl.org/vocab/vann/",
+    xsd: "http://www.w3.org/2001/XMLSchema#"
+  },
+  builtinTags: {
+  },
+  ontologyMappings: [
+    {
+      tag: "baseURI",
+      property: "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    {
+      tag: "baseURIabbrev",
+      property: "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    {
+      tag: "issued",
+      property: "http://purl.org/dc/terms/issued",
+      mandatory: true,
+      type: "http://www.w3.org/2001/XMLSchema#date"
+    },
+    {
+      tag: "license",
+      property: "http://purl.org/dc/terms/license",
+      mandatory: true,
+      type: "http://www.w3.org/2000/01/rdf-schema#Resource"
+    }
+  ],
+  internalMappings: [
+    {
+      tag: "label",
+      property: "http://www.w3.org/2000/01/rdf-schema#label",
+      lang: "en",
+      fallbackTags: ["ap-label-en", "label-en"]
+    },
+    {
+      tag: "definition",
+      property: "http://www.w3.org/2000/01/rdf-schema#comment",
+      lang: "en",
+      fallbackTags: ["ap-definition-en","definition-en"]
+    },
+    {
+      tag: "usage",
+      property: "http://www.w3.org/2004/02/skos/core#scopeNote",
+      lang: "en",
+      fallbackTags: ["ap-usageNote-en", "usageNote-en"]
+    },
+    {
+      tag: "ap-label-en",
+      property: "http://www.w3.org/2000/01/rdf-schema#label",
+      lang: "en",
+      fallbackTags: ["label-en"]
+    },
+    {
+      tag: "ap-definition-en",
+      property: "http://www.w3.org/2000/01/rdf-schema#comment",
+      mandatory: true,
+      lang: "en",
+      fallbackTags: ["definition-en"]
+    },
+    {
+      tag: "ap-usageNote-en",
+      property: "http://www.w3.org/2004/02/skos/core#scopeNote",
+      lang: "en",
+      fallbackTags: []
+    },
+    {
+      tag: "ap-codelist",
+      property: "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      fallbackTags: []
+    }
+  ],
+  externalMappings: [
+    {
+      tag: "label",
+      property: "http://www.w3.org/2000/01/rdf-schema#label",
+      lang: "en",
+      fallbackTags: ["ap-label-en", "label-en"]
+    },
+    {
+      tag: "definition",
+      property: "http://www.w3.org/2000/01/rdf-schema#comment",
+      lang: "en",
+      fallbackTags: ["ap-definition-en","definition-en"]
+    },
+    {
+      tag: "usage",
+      property: "http://www.w3.org/2004/02/skos/core#scopeNote",
+      lang: "en",
+      fallbackTags: ["ap-usageNote-en", "usageNote-en"]
+    },
+    {
+      tag: "ap-label-en",
+      property: "http://www.w3.org/2000/01/rdf-schema#label",
+      lang: "en",
+      fallbackTags: ["label-en"]
+    },
+    {
+      tag: "ap-definition-en",
+      property: "http://www.w3.org/2000/01/rdf-schema#comment",
+      lang: "en",
+      fallbackTags: ["definition-en"]
+    },
+    {
+      tag: "ap-usageNote-en",
+      property: "http://www.w3.org/2004/02/skos/core#scopeNote",
+      lang: "en",
+      fallbackTags: []
+    },
+    {
+      tag: "ap-codelist",
+      property: "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      fallbackTags: []
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "dummy": "11",
+    "urlref": "/doc/applicationprofile/cccev-ap",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "cccev-ap",
+    "filename": "config/cccev-ap.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/vocabulary/sdgtest-voc",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgtest2-voc",
+    "filename": "config/sdgtest2-voc.json",
+    "navigation": {}
+  },
+  {
+    "dummy": 1,
+    "urlref": "/doc/applicationprofile/sdgtest-ap",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgtest2-ap",
+    "filename": "config/sdgtest2-ap.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/vocabulary/sdg-feedback-voc",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-feedback-voc",
+    "filename": "config/sdgmodels2-feedback-voc.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/vocabulary/sdg-namespaces-voc",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-namespaces-voc",
+    "filename": "config/sdgmodels2-namespaces-voc.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/applicationprofile/sdg-mailto-ap",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-mailto-ap",
+    "filename": "config/sdgmodels2-mailto-ap.json",
+    "examples": true,
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/applicationprofile/sdg-feedback-ap",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-feedback-ap",
+    "filename": "config/sdgmodels2-feedback-ap.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/vocabulary/sdg-voc",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-voc",
+    "filename": "config/sdgmodels2-voc.json",
+    "navigation": {}
+  },
+  {
+	  "dummy" : 2,
+    "urlref": "/doc/applicationprofile/sdg-ap",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-ap",
+    "filename": "config/sdgmodels2-ap.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/applicationprofile/sdg-raw",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-raw",
+    "filename": "config/sdgmodels2-raw.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/implementationmodel/sdg-impl-ap",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-impl-ap",
+    "filename": "config/sdgmodels2-impl-ap.json",
+    "navigation": {}
+  },
+  {
+    "urlref": "/doc/implementationmodel/sdg-impl-voc",
+    "repository": "https://github.com/AnnemarieWittig/englishworkspace",
+    "branchtag": "main",
+    "name": "sdgmodels2-impl-voc",
+    "filename": "config/sdgmodels2-impl-voc.json",
+    "navigation": {}
+  },
+  {
+    "disabled": true,
+    "dummy": "associaties058",
+    "urlref": "/doc/applicatieprofiel/documentatie/associaties",
+    "repository": "https://github.com/bertvannuffelen/demo_oslodoc",
+    "branchtag": "master",
+    "name": "associaties",
+    "navigation": {}
+  },
+  {
+    "disabled": true,
+    "urlref": "/doc/vocabularium/example-voc",
+    "repository": "https://github.com/AnnemarieWittig/duetworkspace",
+    "branchtag": "main",
+    "name": "mijn-vocabularium-voc",
+    "filename": "config/mijn-vocabularium-voc.json",
+    "navigation": {}
+  },
+  {
+    "disabled": true,
+    "urlref": "/doc/applicatieprofiel/persoon-basis/",
+    "repository": "https://github.com/AnnemarieWittig/duetworkspace",
+    "branchtag": "main",
+    "name": "persoon-basis",
+    "filename": "config/persoon-basis.json",
+    "navigation": {}
+  },
+  {
+    "disabled": true,
+    "urlref": "/doc/applicatieprofiel/example-ap",
+    "repository": "https://github.com/AnnemarieWittig/duetworkspace",
+    "branchtag": "main",
+    "name": "mijn-applicatieprofiel-ap",
+    "filename": "config/mijn-applicatieprofiel-ap.json",
+    "navigation": {}
+  }
+]

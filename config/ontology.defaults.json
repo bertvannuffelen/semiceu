@@ -1,0 +1,7 @@
+{
+    "dcterms:license" : "https://creativecommons.org/licenses/by/4.0/",
+    "dcterms:mediator" : { "foaf:homepage" : "https://semic.eu",
+		           "foaf:mbox" : "mailto: contact@semic.eu",
+			   "foaf:name" : "Semantic Interoperability Community (SEMIC)" 
+    }
+}

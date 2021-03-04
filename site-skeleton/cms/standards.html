@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>OSLO Standaardenregister | Vlaanderen.be</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
+    <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
+
+    <link href="/cms/icons/DUETLogo.jpg" rel="icon" sizes="192x192">
+    <link href="/cms/icons/DUETLogo.jpg" rel="apple-touch-icon">
+    <link href="/cms/icons/DUETLogo.jpg" rel="apple-touch-icon" sizes="76x76">
+    <link href="/cms/icons/DUETLogo.jpg" rel="apple-touch-icon" sizes="120x120">
+    <link href="/cms/icons/DUETLogo.jpg" rel="apple-touch-icon" sizes="152x152">
+    <meta content="/cms/icons/DUETLogo.jpg" name="msapplication-square70x70logo">
+    <meta content="/cms/icons/DUETLogo.jpg" name="msapplication-square150x150logo">
+    <meta content="/cms/icons/DUETLogo.jpg" name="msapplication-wide310x150logo">
+    <meta content="/cms/icons/DUETLogo.jpg" name="msapplication-square310x310logo">
+    <meta content="#7ED956" name="msapplication-TileColor">
+</head>
+
+<body>
+    <div style="min-height:44px;;" id="duet-header" class="header">
+        <!-- insert your global header here -->
+        <title>Duet</title>
+        <!-- end global header-->
+    </div>
+
+    <!-- Start page content -->
+    <div class="page">
+        <div class="layout layout--wide">
+            <div class="skiplink">
+                <a href="#main">Overslaan en naar de algemene inhoud gaan</a>
+            </div>
+        </div>
+
+        <!-- header here -->
+        <!-- end header -->
+        <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
+            <header class="content-header content-header--small content-header--half-image u-spacer--large">
+                <div class="content-header__wrapper">
+                    <div class="layout layout--wide">
+                        <div class="content-header__content">
+                            <div class="content-header__logo-wrapper">
+                                <i class="logo">DUETLogo</i>
+                                <a href="#" class="content-header__entity-logo">
+                                    <span class="content-header__entity-logo__title">Registry of Standards</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="region">
+                <div class="layout layout--wide">
+                    <!-- intro -->
+                    <div id="introductie" class="introduction u-spacer--large">
+                        <p>
+                            Dit standaardenregister geeft een overzicht van alle lopende en afgewerkte trajecten die
+                            deel uitmaken van het initiatief Open Standaarden voor Linkende Organisaties (OSLO) van de
+                            Vlaamse overheid.
+                        </p>
+                    </div>
+                    <!-- end intro -->
+                    <!-- cijfers -->
+                    <div align="right">
+                        <div class="grid u-spacer--large">
+                            <div class="col--3-12 col--6-12--s">
+                                <div class="infotext-links">
+                                    <div class="infotext-wrapper">
+                                        <a href="#erkende_standaarden" class="infotext infotext--badge">
+                                            <div class="infotext__value js-infotext__value" id="count_erkende"></div>
+                                            <div class="infotext__text">Erkende standaarden</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col--3-12 col--6-12--s">
+                                <div class="infotext-links">
+                                    <div class="infotext-wrapper">
+                                        <a href="#kandidaat-standaarden" class="infotext infotext--badge">
+                                            <div class="infotext__value js-infotext__value" id="count_kandidaat"></div>
+                                            <div class="infotext__text">Kandidaat-standaarden</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col--3-12 col--6-12--s">
+                                <div class="infotext-links">
+                                    <div class="infotext-wrapper">
+                                        <a href="#standaarden_in_ontwikkeling" class="infotext infotext--badge">
+                                            <div class="infotext__value js-infotext__value" id="count_ontwikkeling">
+                                            </div>
+                                            <div class="infotext__text">Standaarden in ontwikkeling</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end cijfers -->
+                    <!-- begeleidende tekst -->
+                    <div id="standaarden" class="u-spacer--large">
+                        <p>
+                            Overheden op lokaal, Vlaams, interfederaal en Europees niveau moeten in het kader van hun
+                            dienstverlening vaak samenwerken. In praktijk moeten bijgevolg heel wat gegevens
+                            uitgewisseld worden tussen de verschillende administraties. Deze gegevens zijn afkomstig
+                            uit verschillende systemen, zijn mogelijks niet in hetzelfde technische formaat beschikbaar,
+                            en volgen niet noodzakelijk dezelfde semantiek. Zonder het maken van afspraken, wordt
+                            kwaliteitsvolle gegevensuitwisseling onmogelijk.
+                            Dit onderstreept het belang van de ontwikkeling van datastandaarden. De verschillende
+                            standaarden kunnen onderverdeeld worden op basis van waar ze zich bevinden in de
+                            levenscyclus, namelijk:
+                        </p>
+                    </div>
+                    <div id="standaarden" class="u-spacer--large">
+                        <ul>
+                            <li><strong>Erkende standaarden</strong>: werden na het doorlopen van een
+                                erkenningsprocedure goedgekeurd door de Werkgroep Datastandaarden van het Stuurorgaan
+                                Vlaams Informatie- en ICT-beleid als standaard binnen de Vlaamse overheid.</li>
+                            <li><strong>Kandidaat-standaarden</strong>: een stabiele specificatie voor de standaard werd
+                                ontwikkeld, aan de hand van een publieke reviewperiode wordt implementatie-ervaring
+                                opgedaan en feedback van buiten de thematische werkgroep
+                                verzameld.
+                            </li>
+                            <li><strong>Standaarden in ontwikkeling</strong>: werden reeds aangemeld bij de Werkgroep
+                                Datastandaarden en worden uitgewerkt door een thematische werkgroep aan de hand van
+                                publieke werksessies.</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div id="standaarden" class="u-spacer--large">
+                        <p>
+                            Bij de ontwikkeling van een datastandaard is het van belang om de verschillende stakeholders
+                            te aligneren, ook binnen de hiërarchie van een organisatie. Om dit draagvlak bij de
+                            verschillende belanghebbenden te kunnen garanderen, is vanuit OSLO een
+                            <a
+                                href="https://data.vlaanderen.be/cms/Proces_en_methode_voor_de_erkenning_van_datastandaarden_v1.0.pdf">ontwikkelproces</a>
+                            uiteengezet, gebaseerd op internationale best practices zoals onder meer ISA, W3C en
+                            OpenStand.
+                            <br>
+                        </p>
+                        <p>
+                            Het proces en de methode zijn geënt op principes van openheid en transparantie, het
+                            stimuleren van hoge betrokkenheid, en het bieden van de nodige garanties op vlak van
+                            stabiliteit, kwaliteit en toepasbaarheid. Bovendien bestaan standaarden in een wijzigende
+                            omgeving, en dient er dus ruimte te zijn voor beheerde wijzigingen en onderhoud van de
+                            afspraken en standaarden.
+                        </p>
+                    </div>
+                    <!-- end begeleidende tekst -->
+                    <!-- dropdown navigatie -->
+                    <nav class="dropdown-navigation">
+                        <h2 class="h2 dropdown-navigation__title">Filter Standards</h2>
+                        <div class="dropdown-navigation__wrapper js-popover" id="openCloseDropdown">
+                            <button class="dropdown-navigation__toggle js-popover__toggle"
+                                id="openCloseDropdownButton">Open Navigation</button>
+                            <ul class="dropdown-navigation__dropdown">
+                                <li>
+                                    <a class="dropdown-navigation__link dropdown-navigation__link--active"
+                                        id="Alle-standaarden">All Standards</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-navigation__link"
+                                        id="Vocabularia-en-applicatieprofielen">Vocabulary and application profiles</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-navigation__link" id="Technische-standaard">Technical Standards</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-navigation__link"
+                                        id="Standaarden-voor-organisatorische-interoperabiliteit">Standards for organizational interoperability</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- end dropdown navigatie -->
+                    <!-- erkende standaarden -->
+                    <h1 id="erkende_standaarden" class="h1">Erkende standaarden</h1>
+                    <div class="col--1-1 u-spacer--large">
+                        <div data-table>
+                            <div class="u-table-overflow">
+                                <table class="data-table" id="tabel_erkende">
+                                    <thead>
+                                        <tr class="data-table__header">
+                                            <th class="data-table__header-title">
+                                                Titel
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Category
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Responsible Organization
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Type of application
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Publication date
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-table-selectable class="Technische-standaard">
+                                            <td><a href="">Example Technical standard</a></td>
+                                            <td>Standards for organizational interoperability</td>
+                                            <td><a href="">Example Organisation</a></td>
+                                            <td>Example Type</td>
+                                            <td>Example Date</td>
+                                        </tr>
+                                        <tr data-table-selectable class="Vocabularia-en-applicatieprofielen">
+                                            <td><a href="">Example Vocabulary and application profiles</a></td>
+                                            <td>Standards for organizational interoperability</td>
+                                            <td><a href="">Example Organisation</a></td>
+                                            <td>Example Type</td>
+                                            <td>Example Date</td>
+                                        </tr>
+                                        <tr data-table-selectable
+                                            class="Standaarden-voor-organisatorische-interoperabiliteit">
+                                            <td><a href="">Example Standards for organizational interoperability</a></td>
+                                            <td>Standards for organizational interoperability</td>
+                                            <td><a href="">Example Organisation</a></td>
+                                            <td>Example Type</td>
+                                            <td>Example Date</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end erkende standaarden -->
+                    <!-- kandidaat-standaarden -->
+                    <h1 id="kandidaat-standaarden" class="h1">Candidate Standards</h1>
+                    <div class="col--1-1 u-spacer--large">
+                        <div data-table>
+                            <div class="u-table-overflow">
+                                <table class="data-table" id="tabel_kandidaat">
+                                    <thead>
+                                        <tr class="data-table__header">
+                                            <th class="data-table__header-title">
+                                                Titel
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Category
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Responsible Organization
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                End of public review period
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-table-selectable class="Vocabularia-en-applicatieprofielen">
+                                            <td><a href="">Example Name</a></td>
+                                            <td>Example Category</td>
+                                            <td><a href="">Example Link</a></td>
+                                            <td>Example Date</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end kandidaat-standaarden -->
+                    <!-- standaarden in ontwikkeling -->
+                    <h1 id="standaarden_in_ontwikkeling" class="h1">Standards in development</h1>
+                    <div class="col--1-1 u-spacer--large">
+                        <div data-table>
+                            <div class="u-table-overflow">
+                                <table class="data-table" id="tabel_ontwikkeling">
+                                    <thead>
+                                        <tr class="data-table__header">
+                                            <th class="data-table__header-title">
+                                                Titel
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Category
+                                            </th>
+                                            <th class="data-table__header-title">
+                                                Responsible Organisation
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Pipeline - nog niet confirmed-->
+
+                                        <tr data-table-selectable class="Technische-standaard">
+                                            <td><a href="">Example Name Technical Standard</a></td>
+                                            <td>Example Category</td>
+                                            <td><a href="">Example Link</a></td>
+                                        </tr>
+
+                                        <tr data-table-selectable class="Vocabularia-en-applicatieprofielen">
+                                            <td><a href="">Example Name Vocabulary Standard</a></td>
+                                            <td>Example Category</td>
+                                            <td><a href="">Example Link</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end standaarden in ontwikkeling -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End page content -->
+
+    <div id="duet-footer">
+
+    </div>
+
+    </script>
+    <!-- Script om de dropdown elements te hiden/showen -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript">
+        var countErkende = $("#tabel_erkende tbody tr").length;
+        var countOntwikkeling = $('#tabel_ontwikkeling tbody tr').length;
+        var countKantdidaat = $('#tabel_kandidaat tbody tr').length;
+
+        document.getElementById("count_erkende").innerHTML = countErkende;
+        document.getElementById("count_ontwikkeling").innerHTML = countOntwikkeling;
+        document.getElementById("count_kandidaat").innerHTML = countKantdidaat;
+    </script>
+    <script type="text/javascript">
+        // Definieer variabele rows -> verwijzing naar de rijen binnen de verschillende tabellen
+        var rows = $('tbody tr');
+
+        // Hide/show All
+        $('#Alle-standaarden').click(function () {
+            var AlleStandaarden = rows.show();
+            // Close dropdown on click
+            document.getElementById("popover-0").classList.remove('js-popover--open');
+            document.getElementById("openCloseDropdownButton").setValue("aria-expanded", false);
+        });
+        // Hide/show Technische standaarden
+        $('#Technische-standaard').click(function () {
+            var TechStandaard = rows.filter('.Technische-standaard').show();
+            rows.not(TechStandaard).hide();
+            document.getElementById("popover-0").classList.remove('js-popover--open');
+            document.getElementById("openCloseDropdownButton").setValue("aria-expanded", false);
+        });
+        // Hide/show Vocabularia en applicatieprofielen
+        $('#Vocabularia-en-applicatieprofielen').click(function () {
+            var VocApplicatieprof = rows.filter('.Vocabularia-en-applicatieprofielen').show();
+            rows.not(VocApplicatieprof).hide();
+            document.getElementById("popover-0").classList.remove('js-popover--open');
+            document.getElementById("openCloseDropdownButton").setValue("aria-expanded", false);
+        });
+        // Hide/show Standaarden voor organisatorische interoperabiliteit
+        $('#Standaarden-voor-organisatorische-interoperabiliteit').click(function () {
+            var OrganisatorischeInterop = rows.filter('.Standaarden-voor-organisatorische-interoperabiliteit').show();
+            rows.not(OrganisatorischeInterop).hide();
+            document.getElementById("popover-0").classList.remove('js-popover--open');
+            document.getElementById("openCloseDropdownButton").setValue("aria-expanded", false);
+        });
+    </script>
+
+    <style>
+        html {
+            background: #7ED956 !important;
+            background-color: #7ED956 !important;
+        }
+
+        .logo {
+            content: url("./icons/DUETLogo.jpg");
+            height: 8%;
+            width: 8%;
+            min-width: 10px;
+            min-height: 10px;
+            float: left;
+        }
+
+        .content-header {
+            background-color: #7ED956 !important;
+        }
+
+        .content-header__entity-logo {
+            display: inline-block;
+            vertical-align: top;
+            padding: 1rem 2rem;
+            font-size: 2.6rem;
+            line-height: .95;
+            text-transform: uppercase;
+            background-color: #7ED956 !important;
+            color: #333332;
+            text-decoration: none
+        }
+
+        a.content-header__entity-logo:focus,
+        a.content-header__entity-logo:hover {
+            background-color: #7ED956;
+            color: #333332
+        }
+
+        .info-block__header:before {
+            color: #333332;
+            background-color: transparent;
+            background: -webkit-linear-gradient(200deg, transparent 20px, #7ED956 20px);
+            background: linear-gradient(-110deg, transparent 20px, #7ED956 20px);
+            width: 7rem
+        }
+
+        .content-header--small .content-header__wrapper>.layout {
+            min-height: 15rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    </style>
+</body>
+
+
+</html>
