@@ -364,7 +364,7 @@ jobs:
           name: List the files which have been created
           command: |
             ls -al /tmp/semiceu-generated/*
-            if [ -d /tmp/semiceu-generated/report ] ; then ls -al /tmp/duet-generated/report/* ; fi
+            if [ -d /tmp/semiceu-generated/report ] ; then ls -al /tmp/semiceu-generated/report/* ; fi
             find /tmp/semiceu-generated/report
       - run: 
           name: insert the commit
