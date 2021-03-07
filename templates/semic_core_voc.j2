@@ -393,6 +393,13 @@
             </div>
             {% endfor %}
             {% endif %}
+	    <div class="region region--no-space-top" id="changelog">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
+                (non-normative)
+                {% block changelog %}
+		<p>placeholder</p>
+                {% endblock %}
+            </div>
             <div class="region region--no-space-top" id="jsonld">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
                 (non-normative)
@@ -430,6 +437,9 @@
                               </li>
                               <li class="side-navigation__item">
                                   <a href="#overview">Overview</a>
+                              </li>
+			      <li class="side-navigation__item">
+                                  <a href="#changelog">Changelog</a>
                               </li>
                               <li class="side-navigation__item">
                                   <a href="#jsonld">JSON-LD Context</a>
