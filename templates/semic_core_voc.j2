@@ -186,11 +186,8 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 {% block status %}
                 <p>
-                  This application profile has the status <a href="{{metadata.status }}">{{ metadata.statuslabel }}</a> publised at {{ metadata.issued }}.
-	        </p><p>
-		  Information about the process and the decisions involved in the creation of this specification are consultable at the 
-		  <a href="{{metadata.standaardregisterurl}}">registry of standards</a>.
-                </p>
+                  This Core Vocabulary has the status of <a href="{{metadata.status }}">{{ metadata.statuslabel }}</a> published at {{ metadata.issued }}.
+	        </p>
                 {% endblock %}
               </section>
             </div>
@@ -204,7 +201,7 @@
             <div class="region region--no-space-top typography" id="conformance">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformiteit</h2>
               {% block conformance %}
-              <p>An implementation is conformant with this application profile if it satifies <a href="/doc/conformance">these rules</a>.</p>
+              <p>TBD</p>
               {% endblock %}
             </div>
             <div class="region region--no-space-top" id="overview">
@@ -213,7 +210,7 @@
                 <div class="col--9-12 col--1-1--s typography">
                   {% if ( ( classes | length > 0)   ) %}
                   <div class="region region--no-space-top">
-                    <p>This document describes the usage of the following entities for a correct usage of the Application Profile: 
+                    <p>This document describes the usage of the following entities for a correct usage of the Core Vocabulary: 
                       <br />
                       |
                       {%- for class in classes |sort(attribute=sortattr) %}
@@ -224,7 +221,7 @@
                   {% endif %}
                   {% if ( ( datatypes | length ) > 0 ) %}
                   <div class="region region--no-space-top">
-                    <p> This document describes the usage of the following datatypes for a correct usage of the Application Profile:
+                    <p> This document describes the usage of the following datatypes for a correct usage of the Core Vocabulary:
                       <br />
                       |
                       {%- for datatype in datatypes |sort(attribute=sortattr) %}
@@ -398,16 +395,16 @@
             {% endif %}
             <div class="region region--no-space-top" id="jsonld">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
-                (niet normatief)
+                (non-normative)
                 {% block jsonld %}
-		<p>A reusable JSON-LD context definition for this application profile is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}_{{language}}.jsonld" target="_blank">{{ documentroot }}/context/{{ metadata.filename }}_{{language}}.jsonld</a></p>
+		<p>A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}_{{language}}.jsonld" target="_blank">{{ documentroot }}/context/{{ metadata.filename }}_{{language}}.jsonld</a></p>
                 {% endblock %}
             </div>
             <div class="region region--no-space-top" id="shacl">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">SHACL template</h2>
                 (non-normative)
                 {% block shacl%}
-		<p>A reusable SHACL template for this application profile is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}_{{language}}-SHACL.ttl" target="_blank">{{ documentroot }}/shacl/{{ metadata.filename }}_{{language}}-SHACL.ttl</a></p>
+		<p>A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}_{{language}}-SHACL.ttl" target="_blank">{{ documentroot }}/shacl/{{ metadata.filename }}_{{language}}-SHACL.ttl</a></p>
                 {% endblock %}
             </div>
           </div>
