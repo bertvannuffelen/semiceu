@@ -1,5 +1,14 @@
 [
   {
+    "dummy": "dimi-1",
+    "urlref": "/doc/core-vocabulary/cccev",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "CCCEV",
+    "filename": "config/cccev.json",
+    "navigation": {}
+  },
+  {
     "dummy": "11",
     "urlref": "/doc/applicationprofile/cccev-ap",
     "repository": "https://github.com/AnnemarieWittig/englishworkspace",
