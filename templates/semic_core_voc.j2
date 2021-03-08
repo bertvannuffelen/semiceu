@@ -235,8 +235,8 @@
             </div>
 
             <div class="region region--no-space-top">
-              <a href="{{ documentroot }}/html/overview.svg" target="_blank">
-                 <img src="{{ documentroot }}/html/overview.svg" />
+              <a href="{{ documentroot }}/html/overview.jpg" target="_blank">
+                 <img src="{{ documentroot }}/html/overview.jpg" />
               </a>
             </div>
             <div class="region region--no-space-top">
@@ -393,8 +393,15 @@
             </div>
             {% endfor %}
             {% endif %}
+	    <div class="region region--no-space-top" id="implementation-note">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Implementation note</h2>
+                (non-normative)
+                {% block changelog %}
+		<p>placeholder</p>
+                {% endblock %}
+            </div>
 	    <div class="region region--no-space-top" id="changelog">
-                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Changelog</h2>
                 (non-normative)
                 {% block changelog %}
 		<p>placeholder</p>
@@ -437,6 +444,9 @@
                               </li>
                               <li class="side-navigation__item">
                                   <a href="#overview">Overview</a>
+                              </li>
+			      <li class="side-navigation__item">
+                                  <a href="#implementation-note">Implementation note</a>
                               </li>
 			      <li class="side-navigation__item">
                                   <a href="#changelog">Changelog</a>
