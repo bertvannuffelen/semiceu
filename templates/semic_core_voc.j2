@@ -215,7 +215,7 @@
                     </p>
                   </div>
                   {% endif %}
-                  {% if ( ( datatypes | length ) > 0 ) %}
+		  {% if ( ( datatypes | length ) > 0 ) %}
                   <div class="region region--no-space-top">
                     <p> This document describes the usage of the following datatypes for a correct usage of the Core Vocabulary:
                       <br />
@@ -308,7 +308,7 @@
             </div>
             {% endfor %}
 
-            {% if datatypes %}
+            {% if ( ( datatypes | length ) > 0 ) %}
             <div class="region region--no-space-top">
               <h2 class="h2">Datatypes</h2>
             </div>
