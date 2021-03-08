@@ -1,10 +1,10 @@
 [
   {
-    "dummy": "dimi-7",
+    "dummy": "dimi-8",
     "urlref": "/doc/core-vocabulary/cccev",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
-    "name": "cccev",
+    "name": "cccev-ap",
     "filename": "config/cccev.json",
     "navigation": {}
   },
