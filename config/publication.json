@@ -1,7 +1,7 @@
 [
   {
     "dummy": "dimi-8",
-    "urlref": "/doc/core-vocabulary/cccev",
+    "urlref": "/doc/applicationprofile/cccev",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
     "name": "cccev-ap",
