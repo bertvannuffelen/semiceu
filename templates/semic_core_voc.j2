@@ -163,13 +163,9 @@
 
             <div class="region region--no-space-top typography" id="summary">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Summary</h2>
-		{% block introduction %}
-		<p>This document describes the <strong>{{ metadata.title }}</strong>.
-		Similarly to all the Core Vocabularies, CCCEV is “<a href=”https://joinup.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf>a context-neutral data model that captures the fundamental characteristics of an entity</a>”.
-		A Core Vocabulary specifies a semantic data model covering a set of use cases across domains.
-		The specification consists of terms with a minimal set of constraints (recommended codelists, usage guidelines).
-		</p>
-                {% endblock %}
+		<!--{% block introduction %}
+		<p>This document describes the <strong>{{ metadata.title }}</strong>.</p>
+                {% endblock %}-->
                 {% block summary %} 
                   {% if metadata.description %} 
                     {{ metadata.description[language] }}
