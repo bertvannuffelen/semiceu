@@ -73,7 +73,7 @@
                           {% for author in authors %}
                           <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
                               <span typeof="foaf:Person">
-                              <span class="p-name fn" property="foaf:lastName">{{ author.last_name }}</span>,
+                              <span class="p-name fn" property="foaf:lastName">{{ author.last_name }}</span>
                               <span class="p-name fn" property="foaf:firstName">{{ author.first_name }}</span>
                               {% if author.affiliation.website and author.affiliation.name %}
                               - <a href="{{ author.affiliation.website }}" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">{{ author.affiliation.name }}</a>
