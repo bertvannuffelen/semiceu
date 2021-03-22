@@ -1,5 +1,14 @@
 [
   {
+    "dummy": "dimi-1",
+    "urlref": "/doc/core-vocabulary/core-person",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-person-ap",
+    "filename": "config/core-person.json",
+    "navigation": {}
+  },
+  {
     "dummy": "dimi-31",
     "urlref": "/doc/core-vocabulary/cccev",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
