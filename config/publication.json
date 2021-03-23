@@ -1,6 +1,24 @@
 [
   {
-    "dummy": "dimi-5",
+    "dummy": "dimi-6",
+    "urlref": "/doc/core-vocabulary/core-location",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-location-ap",
+    "filename": "config/core-location.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-6",
+    "urlref": "/doc/core-vocabulary/core-business",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-business-ap",
+    "filename": "config/core-business.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-6",
     "urlref": "/doc/core-vocabulary/core-person",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
