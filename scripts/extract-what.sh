@@ -93,6 +93,7 @@ extract_json() {
 	cat  ${TTDIR}/$(cat .names.txt).report
 	exit -1;
     fi
+    
     cat .publication-point.json
     jq -s '.[0] + .[1][0] + .[2]' $(cat .names.txt).jsonld $MAPPINGFILE .publication-point.json > ${TTDIR}/all-$(cat .names.txt).jsonld ## the sum in jq overwrites the value for .contributors
     cp $(cat .names.txt).jsonld ${TTDIR}
