@@ -1,6 +1,15 @@
 [
   {
     "dummy": "dimi-7",
+    "urlref": "/doc/core-vocabulary/core-public-organisation",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-public-organisation-ap",
+    "filename": "config/core-public-organisation.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-7",
     "urlref": "/doc/core-vocabulary/core-location",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
