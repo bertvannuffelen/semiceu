@@ -1,6 +1,6 @@
 [
   {
-    "dummy": "dimi-9",
+    "dummy": "dimi-10",
     "urlref": "/doc/core-vocabulary/core-public-organisation",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
@@ -9,7 +9,7 @@
     "navigation": {}
   },
   {
-    "dummy": "dimi-9",
+    "dummy": "dimi-10",
     "urlref": "/doc/core-vocabulary/core-location",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
@@ -18,7 +18,7 @@
     "navigation": {}
   },
   {
-    "dummy": "dimi-9",
+    "dummy": "dimi-10",
     "urlref": "/doc/core-vocabulary/core-business",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
@@ -27,7 +27,7 @@
     "navigation": {}
   },
   {
-    "dummy": "dimi-9",
+    "dummy": "dimi-10",
     "urlref": "/doc/core-vocabulary/core-person",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
