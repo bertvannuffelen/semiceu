@@ -28,6 +28,18 @@
 </head>
 
 <body>
+
+  <script type="text/javascript">
+      function iframeLoaded() {
+         var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+  </script> 
+
   <div style="min-height:44px;;" id="duet-header" class="header">
     <!-- insert your global header here -->
     <title>SEMIC</title>
@@ -462,6 +474,16 @@
   </div>
 
   <script src="https://dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+  <script type="text/javascript">
+      function iframeLoaded() {
+         var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+  </script> 
 
   <style>
     @media screen {  /* hide from IE3 */
