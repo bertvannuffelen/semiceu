@@ -38,6 +38,14 @@
                 iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
           }   
       }
+      function iframeLoadedbyID(myid) {
+         var iFrameID = document.getElementById(myid);
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
   </script> 
 
   <div style="min-height:44px;;" id="duet-header" class="header">
@@ -473,6 +481,14 @@
   <script type="text/javascript">
       function iframeLoaded() {
          var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+      function iframeLoadedbyID(myid) {
+         var iFrameID = document.getElementById(myid);
           if(iFrameID) {
                 // here you can make the height, I delete it first, then I make it again
                 iFrameID.height = "";
