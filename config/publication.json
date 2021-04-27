@@ -1,5 +1,14 @@
 [
   {
+    "dummy": "dimi-1",
+    "urlref": "/doc/application-profile/cpsv-ap",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "cpsv-ap",
+    "filename": "config/cpsv-ap.json",
+    "navigation": {}
+  },
+  {
     "dummy": "dimi-22",
     "urlref": "/doc/core-vocabulary/core-public-organisation",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
