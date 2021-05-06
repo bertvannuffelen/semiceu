@@ -1,5 +1,14 @@
 [
   {
+    "dummy": "maxime-1",
+    "urlref": "/doc/sdg",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "sdg",
+    "filename": "config/sdg.json",
+    "navigation": {}
+  },  
+  {
     "dummy": "dimi-2",
     "urlref": "/doc/application-profile/cpsv-ap",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
