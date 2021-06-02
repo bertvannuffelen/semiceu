@@ -292,6 +292,7 @@ jobs:
           root: /tmp/workspace
           paths:
             - voc/
+            - target/
   render-voc-rdf:
     docker:
       - image: circleci/ruby:2.6.5-stretch
