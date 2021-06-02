@@ -383,6 +383,7 @@ jobs:
           command: |
             mkdir -p /tmp/semiceu-generated/report
             mkdir -p /tmp/semiceu-generated/examples
+            mkdir -p json
             if [ -d target ] ; then if [ ! "$(ls -A target)" ] ; then echo "directory target is empty" ; else cp -R target/* /tmp/semiceu-generated ; fi fi
             if [ -d report ] ; then if [ ! "$(ls -A report)" ] ; then echo "directory report is empty" ; else cp -R report/* /tmp/semiceu-generated/report ; fi fi
             if [ -d reporthtml ] ; then if [ ! "$(ls -A reporthtml)" ] ; then echo "directory reporthtml is empty" ; else cp -R reporthtml/* /tmp/semiceu-generated/report ; fi fi
