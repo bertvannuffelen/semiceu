@@ -80,8 +80,14 @@ jobs:
       - run:
           name: Normalise the recovered JSON-LD files (in the src directory)
           command: |
+            mkdir -p /tmp/workspace/report /tmp/workspace/json /tmp/workspace/src
             $PWD/scripts/pretty-print-jsonfiles.sh /tmp/workspace
-            mkdir -p /tmp/workspace/report /tmp/workspace/json /tmp/workspace/json
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/report/.ignore01
+            touch /tmp/workspace/json/.ignore02
+            touch /tmp/workspace/src/.ignore03
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -262,7 +268,7 @@ jobs:
           root: /tmp/workspace
           paths:
             - target/
-  render-voc-rdf:
+  render-voc-jsonld:
     docker:
       - image: informatievlaanderen/oslo-specification-generator:multilingual
     steps:
@@ -272,13 +278,36 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            gem install linkeddata && mkdir -p /tmp/workspace/voc
-            mkdir -p /tmp/workspace/target
+            mkdir -p /tmp/workspace/voc
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/voc/.ignore11
       - run:
           name: Generate vocabulary in baseformat jsonld
           command: |
-            $PWD/scripts/generate-voc.sh /tmp/workspace json $PWD/config
             mkdir -p /tmp/workspace/target/doc/vocabularium
+            $PWD/scripts/generate-voc.sh /tmp/workspace json $PWD/config
+      - persist_to_workspace:
+          root: /tmp/workspace
+          paths:
+            - voc/
+  render-voc-rdf:
+    docker:
+      - image: circleci/ruby:2.6.5-stretch
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Install dependencies
+          command: |
+            gem install linkeddata
+            mkdir -p /tmp/workspace/target/doc/vocabularium
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/target/.ignore12
       - run:
           name: Convert vocabulary to turtle
           command: |
@@ -407,9 +436,12 @@ workflows:
       - render-html-details:
           requires:
             - render-merged-jsonld
-      - render-voc-rdf:
+      - render-voc-jsonld:
           requires:
             - render-merged-jsonld
+      - render-voc-rdf:
+          requires:
+            - render-voc-jsonld
       - render-shacl-details:
           requires:
             - render-merged-jsonld
