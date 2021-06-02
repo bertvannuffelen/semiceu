@@ -388,7 +388,7 @@ jobs:
             if [ -d report ] ; then if [ ! "$(ls -A report)" ] ; then echo "directory report is empty" ; else cp -R report/* /tmp/semiceu-generated/report ; fi fi
             if [ -d reporthtml ] ; then if [ ! "$(ls -A reporthtml)" ] ; then echo "directory reporthtml is empty" ; else cp -R reporthtml/* /tmp/semiceu-generated/report ; fi fi
             if [ -d translation ] ; then if [ ! "$(ls -A translation)" ] ; then echo "directory translation is empty" ; else cp -R translation/* /tmp/semiceu-generated/report ; fi fi
-            if [ -d json ] ; then if [ ! "$(ls -A json)" ] ; then echo "directory json is empty" ; else cp -R json/*   /tmp/semiceu-generated/report ; fi fi
+            #            if [ -d json ] ; then if [ ! "$(ls -A json)" ] ; then echo "directory json is empty" ; else cp -R json/*   /tmp/semiceu-generated/report ; fi fi
             if [ -d examples ] ; then if [ ! "$(ls -A examples)" ] ; then echo "directory examples is empty" ; else cp -R examples/* /tmp/semiceu-generated/examples ; fi fi
       - run:
           name: List the files which have been created
