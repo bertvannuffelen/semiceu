@@ -10,7 +10,7 @@
   }, 
   {
     "dummy": "dimi-1",
-    "urlref": "/doc/core-vocabulary/cccev-voc",
+    "urlref": "/doc/vocabularium/cccev-voc",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
     "name": "cccev",

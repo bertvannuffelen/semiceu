@@ -30,7 +30,7 @@ make_jsonld() {
         exit -1
     else
         echo "RENDER-DETAILS(voc-languageaware): saved to ${OUTPUT}"
-        echo "RENDER-DETAILS(voc-languageaware): It will now be concatted and saved to ${TARGET}"
+        echo "RENDER-DETAILS(voc-languageaware): It will now be concatinated and saved to ${TARGET}"
         
          if [ -f ${CONFIGDIR}/ontology.defaults.json ]
         then
