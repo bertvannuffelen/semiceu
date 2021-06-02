@@ -7,7 +7,25 @@
     "name": "sdg",
     "filename": "config/sdg.json",
     "navigation": {}
-  },  
+  }, 
+  {
+    "dummy": "dimi-1",
+    "urlref": "/doc/core-vocabulary/cccev-voc",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "cccev",
+    "filename": "config/cccev.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-1",
+    "urlref": "/doc/core-vocabulary/cccev",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "cccev-ap",
+    "filename": "config/cccev.json",
+    "navigation": {}
+  },
   {
     "dummy": "dimi-2",
     "urlref": "/doc/application-profile/cpsv-ap",
