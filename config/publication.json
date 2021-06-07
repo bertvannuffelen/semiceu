@@ -9,7 +9,7 @@
     "navigation": {}
   }, 
   {
-    "dummy": "dimi-6",
+    "dummy": "dimi-7",
     "urlref": "/doc/vocabularium/cccev-voc",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
@@ -18,7 +18,7 @@
     "navigation": {}
   },
   {
-    "dummy": "dimi-6",
+    "dummy": "dimi-7",
     "urlref": "/doc/core-vocabulary/cccev",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
