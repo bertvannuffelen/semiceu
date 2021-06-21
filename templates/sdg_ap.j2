@@ -309,7 +309,7 @@
 			<td>{{ prop.cardinality }}</td>
                         <td property="rdfs:comment">{{ prop.description[language] }}</td>
                         <td property="skos:scopeNote">{{ prop.usage[language] | safe }}</td>
-                        <td>{% if prop['codelist_uri'] %}<a href="{{ prop['codelist_uri'] }}">Link</a>{% endif %}</td>
+                        <td>{{ prop['codelist_uri'] }}</td>
                       </tr>
                     {% endfor %}
                     </tbody>
