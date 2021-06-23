@@ -281,6 +281,7 @@
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
+			<th class="data-table__header-title--sortable">Cardinality</th>
                         <th class="data-table__header-title--sortable">Description</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
@@ -305,6 +306,7 @@
 			    {% endif %}
                           {% endfor %}
                         </td>
+			<td>{{ prop.cardinality }}</td>
                         <td property="rdfs:comment">{{ prop.description[language] }}</td>
                         <td property="skos:scopeNote">{{ prop.usage[language] | safe }}</td>
                         <td>{% if prop['codelist_uri'] %}<a href="{{ prop['codelist_uri'] }}">Link</a>{% endif %}</td>
@@ -359,6 +361,7 @@
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expects Type</th>
+			<th class="data-table__header-title--sortable">Cardinality</th>
                         <th class="data-table__header-title--sortable">Description</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
@@ -382,6 +385,7 @@
 			    {% endif %}
                           {% endfor %}
                         </td>
+			<td>{{ prop.cardinality }}</td>
                         <td property="rdfs:comment">{{ prop.description[language] }}</td>
                         <td property="skos:scopeNote">{{ prop.usage[language] | safe }}</td>
                         <td>{% if prop['codelist_uri'] %}<a href="{{ prop['codelist_uri'] }}">Link</a>{% endif %}</td>
