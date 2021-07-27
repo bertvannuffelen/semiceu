@@ -1,5 +1,14 @@
 [
   {
+    "dummy": "max-1",
+    "urlref": "/doc/iceg/public-service",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-public-service",
+    "filename": "config/iceg-public-service.json",
+    "navigation": {}
+  }, 
+  {
     "dummy": "dimi-3",
     "urlref": "/doc/iceg/public-organisation",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
