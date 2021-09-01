@@ -1,6 +1,6 @@
 [
   {
-    "dummy": "max-1",
+    "dummy": "max-2",
     "urlref": "/doc/iceg/public-service",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
@@ -9,7 +9,7 @@
     "navigation": {}
   }, 
   {
-    "dummy": "dimi-3",
+    "dummy": "dimi-4",
     "urlref": "/doc/iceg/public-organisation",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
