@@ -9,15 +9,6 @@
     "navigation": {}
   },
   {
-    "dummy": "christophe-2",
-    "urlref": "/doc/iceg/iceg-public-organisation",
-    "repository": "https://github.com/bertvannuffelen/semiceuthema",
-    "branchtag": "master",
-    "name": "iceg-public-organisation",
-    "filename": "config/iceg-public-organisation.json",
-    "navigation": {}
-  },
-  {
     "dummy": "louis-2",
     "urlref": "/doc/iceg/public-organisation",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
