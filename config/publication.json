@@ -9,12 +9,12 @@
     "navigation": {}
   },
   {
-    "dummy": "Louis-40",
+    "dummy": "Louis-41",
     "urlref": "/doc/iceg/public-organisation",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
     "name": "iceg-public-organisation",
-    "filename": "config/iceg-public-organisation.json",
+    "filename": "iceg-public-organisation.json",
     "navigation": {}
   }, 
   {
