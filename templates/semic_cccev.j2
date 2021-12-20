@@ -182,12 +182,14 @@
               {% endblock %}
             </div>
 	    -->
+<!--
             <div class="region region--no-space-top typography" id="conformance">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformance</h2>
               {% block conformance %}
               <p>TBD</p>
               {% endblock %}
             </div>
+-->
             <div class="region region--no-space-top" id="overview">
               <h2 class="h2">Overview</h2>
               <div class="grid">
@@ -249,7 +251,7 @@
                       <a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
                     {%- endfor %}.</dd>
                     {% else %}
-                    <dd>No properties have been defined for this entity.</dd>
+                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
                     {% endif %}
                   </dl>
                 </div>
