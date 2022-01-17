@@ -242,7 +242,7 @@
               <h3 class="h3" id="{{ entity.name }}"><a href="{{ entity.uri }}" data-toggle="tooltip" data-content="{{ entity.uri }}" data-placement="right">{{ entity.label[language] }}</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>{{ entity.description[language] }}</dd>
+                    <dt>Definition</dt><dd>{{ entity.description[language] }}</dd>
                     {% if entity.usage[language] %}
                     <dt>Usage</dt><dd>{{ entity.usage[language] | safe }}</dd>
                     {% endif %}
@@ -271,7 +271,7 @@
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -320,7 +320,7 @@
 	      {% endif %}
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>{{ entity.description[language] }}</dd>
+                    <dt>Definition</dt><dd>{{ entity.description[language] }}</dd>
                     {% if entity.usage[language] %}
                     <dt>Usage</dt><dd>{{ entity.usage[language] | safe }}</dd>
                     {% endif %}
@@ -349,7 +349,7 @@
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expects Type</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
