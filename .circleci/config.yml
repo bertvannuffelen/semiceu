@@ -270,7 +270,7 @@ jobs:
             - target/
   render-voc-jsonld:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
