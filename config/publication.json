@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "dummy": "christophe-42",
     "urlref": "/doc/iceg/public-service",
@@ -45,7 +45,7 @@
     "navigation": {}
   },
   {
-    "dummy": "dimi-9",
+    "dummy": "dimi-10",
     "urlref": "/doc/application-profile/cpsv-ap",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
