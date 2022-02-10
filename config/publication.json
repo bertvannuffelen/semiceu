@@ -16,7 +16,8 @@
     "branchtag": "master",
     "name": "iceg-public-organisation",
     "filename": "config/iceg-public-organisation.json",
-    "navigation": {}
+    "navigation": {},
+    "disabled" : true
   }, 
   {
     "dummy": "maxime-22",
