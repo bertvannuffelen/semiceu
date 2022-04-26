@@ -6,8 +6,7 @@
     "branchtag": "master",
     "name": "iceg-public-service",
     "filename": "config/iceg-public-service.json",
-    "navigation": {},
-    "disabled" : true
+    "navigation": {}
   },
   {
     "dummy": "christophe-56",
