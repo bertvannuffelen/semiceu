@@ -14,12 +14,33 @@
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
 
+  <link rel="icon" sizes="192x192" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/cms/icons/DUETLogo.jpg" />
+
+  <meta name="msapplication-square70x70logo" content="/cms/icons/DUETLogo.jpg" />
+  <meta name="msapplication-square150x150logo" content="/cms/icons/DUETLogo.jpg" />
+  <meta name="msapplication-wide310x150logo" content="/cms/icons/DUETLogo.jpg" />
+  <meta name="msapplication-square310x310logo" content="/cms/icons/DUETLogo.jpg" />
   <meta name="msapplication-TileColor" content="#7ED956" />
 </head>
 
 <body>
 
-  <div style="min-height:44px;;" id="logo-header" class="header">
+  <script type="text/javascript">
+      function iframeLoaded() {
+         var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+  </script> 
+
+  <div style="min-height:44px;;" id="duet-header" class="header">
     <!-- insert your global header here -->
     <title>SEMIC</title>
     <i class="logo">SEMIC logo</i>
@@ -44,7 +65,7 @@
               <dl>
               <dt>Status</dt><dd>{{metadata.status}}</dd>
               <dt>Published at</dt><dd>{{metadata.issued}}</dd>
-              <dt>This version</dt><dd><a href="https://semiceu.github.io/{{metadata.standaardregisterurl}}/releases/2.00">https://semiceu.github.io/{{metadata.standaardregisterurl}}/releases/2.00</a></dd>
+              <dt>This version</dt><dd><a href="https://belgif.github.io/thematic/models/public%20services/index_en.html">https://belgif.github.io/thematic/models/public%20services/index_en.html</a><br></dd>
               {% if metadata.navigation.next %}
               <dt>Next version</dt><dd><a href="{{metadata.navigation.next}}">{{metadata.navigation.next}}</a></dd>
               {% endif %}
@@ -127,7 +148,7 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Source</dt><dd><a href="https://github.com/SEMICeu/{{metadata.standaardregisterurl}}/tree/master/releases/2.00">https://github.com/SEMICeu/{{metadata.standaardregisterurl}}/tree/master/releases/2.00</a></dd>
+              <dt>Source</dt><dd><br></dd>
               <!--<dt>Changelog</dt><dd><a href="{{metadata.changelogurl}}">{{metadata.changelogurl}}</a></dd>-->
               <dt>Feedback</dt><dd><a href="{{metadata.feedbackurl}}">{{metadata.feedbackurl}}</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="{{metadata.standaardregisterurl}}">{{metadata.standaardregisterurl}}</a></dd>-->
@@ -169,33 +190,31 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 {% block status %}
                 <p>
-                  This Core Vocabulary has the status of Working Draft published at {{ metadata.issued }}.
+                  This model has the status of Working Draft published on {{ metadata.issued }}.
 	        </p>
                 {% endblock %}
               </section>
             </div>
-
-             <div class="region region--no-space-top typography" id="license">
-              <h2 class="h2">License</h2>
-              <!-- {% block license %} -->
-              <p><span rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text" xmlns:dct="http://purl.org/dc/terms/">This specification</span> of <a rel="cc:attributionURL" property="cc:attributionName" href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic"" xmlns:cc="http://creativecommons.org/ns#">SEMIC</a> is published under <a href="{{ metadata.license }}" rel="license">"CC-BY 4.0"</a>.</p>
-              <!-- {% endblock %} -->
-            </div>
-			 <!--
             <div class="region region--no-space-top typography" id="conformance">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformance</h2>
               {% block conformance %}
-              <p>TBD</p>
+              <p>To be defined</p>
+              {% endblock %}
+            <!--<div class="region region--no-space-top typography" id="license">
+              <h2 class="h2">License</h2>
+              {% block license %}
+              <p><span rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text" xmlns:dct="http://purl.org/dc/terms/">This specification</span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION</a> is published under <a href="{{ metadata.license }}" rel="license">"CC0"</a>.</p>
               {% endblock %}
             </div>
-			-->
+            -->
+            </div>
             <div class="region region--no-space-top" id="overview">
               <h2 class="h2">Overview</h2>
               <div class="grid">
                 <div class="col--9-12 col--1-1--s typography">
                   {% if ( ( classes | length > 0)   ) %}
                   <div class="region region--no-space-top">
-                    <p>This document describes the usage of the following entities for a correct usage of the Core Vocabulary: 
+                    <p>This document describes the usage of the following entities for a correct usage of the data model: 
                       <br />
                       |
                       {%- for class in classes |sort(attribute=sortattr) %}
@@ -232,7 +251,7 @@
               <h3 class="h3" id="{{ entity.name }}"><a href="{{ entity.uri }}" data-toggle="tooltip" data-content="{{ entity.uri }}" data-placement="right">{{ entity.label[language] }}</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>{{ entity.description[language] }}</dd>
+                    <dt>Description</dt><dd>{{ entity.description[language] }}</dd>
                     {% if entity.usage[language] %}
                     <dt>Usage</dt><dd>{{ entity.usage[language] | safe }}</dd>
                     {% endif %}
@@ -250,7 +269,7 @@
                       <a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
                     {%- endfor %}.</dd>
                     {% else %}
-                    <dd>No properties have been defined for this entity in the scope of this specification.</dd>
+                    <dd>No properties have been defined for this entity.</dd>
                     {% endif %}
                   </dl>
                 </div>
@@ -262,7 +281,7 @@
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Definition</th>
+                        <th class="data-table__header-title--sortable">Description</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -289,7 +308,7 @@
 			<td>{{ prop.cardinality }}</td>
                         <td property="rdfs:comment">{{ prop.description[language] }}</td>
                         <td property="skos:scopeNote">{{ prop.usage[language] | safe }}</td>
-                        <td>{% if prop['codelist_uri'] %}<a href="{{ prop['codelist_uri'] }}">Link</a>{% endif %}</td>
+                        <td>{{ prop['codelist_uri'] | safe }}</td>
                       </tr>
                     {% endfor %}
                     </tbody>
@@ -312,7 +331,7 @@
 	      {% endif %}
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>{{ entity.description[language] }}</dd>
+                    <dt>Description</dt><dd>{{ entity.description[language] }}</dd>
                     {% if entity.usage[language] %}
                     <dt>Usage</dt><dd>{{ entity.usage[language] | safe }}</dd>
                     {% endif %}
@@ -342,7 +361,7 @@
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expects Type</th>
 			<th class="data-table__header-title--sortable">Cardinality</th>
-                        <th class="data-table__header-title--sortable">Definition</th>
+                        <th class="data-table__header-title--sortable">Description</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -365,7 +384,7 @@
 			    {% endif %}
                           {% endfor %}
                         </td>
-			<td>{{ prop.cardinality }}</td>
+			<td>{{ prop['cardinality'] }}</td>
                         <td property="rdfs:comment">{{ prop.description[language] }}</td>
                         <td property="skos:scopeNote">{{ prop.usage[language] | safe }}</td>
                         <td>{% if prop['codelist_uri'] %}<a href="{{ prop['codelist_uri'] }}">Link</a>{% endif %}</td>
@@ -392,7 +411,6 @@
 	    {% endblock %}
 	    -->
 	    
-	    <!--
 	    <div class="region region--no-space-top" id="changelog">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Changelog w.r.t. previous version</h2>
                 (non-normative)
@@ -401,7 +419,6 @@
 		<p>placeholder</p>
                 {% endblock %}
             </div>
-	    -->
 	    
             <div class="region region--no-space-top" id="jsonld">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
@@ -438,11 +455,10 @@
 			      <li class="side-navigation__item">
                                   <a href="#license">License</a>
                               </li>
-			      
+			      -->
                               <li class="side-navigation__item">
                                   <a href="#conformance">Conformance</a>
                               </li>
-				-->
                               <li class="side-navigation__item">
                                   <a href="#overview">Overview</a>
                               </li>
@@ -450,13 +466,11 @@
 			      <li class="side-navigation__item">
                                   <a href="#examples">Examples</a>
 			      -->
-			      <!--
 			      <li class="side-navigation__item">
                                   <a href="#changelog">Changelog</a>
                               </li>
-			      -->
                               <li class="side-navigation__item">
-                                  <a href="#jsonld">JSON-LD context</a>
+                                  <a href="#jsonld">JSON-LD Context</a>
                               </li>
 			      <!--
                               <li class="side-navigation__item">
@@ -519,7 +533,7 @@
       background-clip: padding-box;
     }
     .logo {
-      content: url("html/semic-icon.png");
+      content: url("html/icon.png");
       height: 20%;
       min-width: 10px;
       min-height: 10px;
