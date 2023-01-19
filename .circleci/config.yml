@@ -295,7 +295,7 @@ jobs:
             - target/
   render-voc-rdf:
     docker:
-      - image: circleci/ruby:2.6.5-stretch
+      - image: circleci/ruby:2.7.5-bullseye
     steps:
       - checkout
       - attach_workspace:
