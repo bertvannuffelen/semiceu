@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% set language = "en" %}
+{% set sortattr = "sort" %}
+
+<html xml:lang="en" lang="en" dir="ltr" typeof="bibo:Document " about="" property="dcterms:language" content="en" prefix="dcterms: http://purl.org/dc/terms/ bibo: http://purl.org/ontology/bibo/ schema: http://schema.org/ w3p: http://www.w3.org/2001/02pd/rec54#" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  {% set name = metadata.title|lower|replace(' ', '-') %} 
+  <title>{{ metadata.title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
+  <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <link rel="icon" sizes="192x192" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/cms/icons/DUETLogo.jpg" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/cms/icons/DUETLogo.jpg" />
+
+  <meta name="msapplication-square70x70logo" content="/cms/icons/DUETLogo.jpg" />
+  <meta name="msapplication-square150x150logo" content="/cms/icons/DUETLogo.jpg" />
+  <meta name="msapplication-wide310x150logo" content="/cms/icons/DUETLogo.jpg" />
+  <meta name="msapplication-square310x310logo" content="/cms/icons/DUETLogo.jpg" />
+  <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+
+<body>
+
+  <script type="text/javascript">
+      function iframeLoaded() {
+         var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+  </script> 
+
+  <div style="min-height:44px;;" id="duet-header" class="header">
+    <!-- insert your global header here -->
+    <title>SEMIC</title>
+    <i class="logo">SEMIC logo</i>
+    <!-- end global header-->
+  </div>
+
+  <!-- Start page content -->
+  <div class="page">
+    <div class="layout layout--wide">
+      <div class="skiplink">
+        <a rel="nofollow noreferrer" href="#main">Skip this section and go to general content</a>
+      </div>
+    </div>
+    <div class="page">
+      <div class="region">
+        <div class="layout layout--wide">
+          <div class="grid u-hr">
+            <div class="col--9-12 col--1-1--s">
+              <h1 class="h1">{{ metadata.title }}</h1>
+
+              <div class="head" role="status">
+              <dl>
+              <dt>Status</dt><dd>{{metadata.status}}</dd>
+              <dt>Published at</dt><dd>{{metadata.issued}}</dd>
+              <dt>This version</dt><dd><a href="https://belgif.github.io/thematic/models/building/index_en.html">https://belgif.github.io/thematic/models/building/index_en.html</a><br></dd>
+              {% if metadata.navigation.next %}
+              <dt>Next version</dt><dd><a href="{{metadata.navigation.next}}">{{metadata.navigation.next}}</a></dd>
+              {% endif %}
+              {% if metadata.navigation.prev %}
+              <dt>Previous version</dt><dd><a href="{{metadata.navigation.prev}}">{{metadata.navigation.prev}}</a></dd>
+              {% endif %}
+              </dl>
+              </div>
+
+              <div class="head" role="contentinfo" id="respecHeader">
+                <dl>
+                        {% for role, contributors in contributors | groupby("role") %}
+                          {% if role == "A" %}
+                            {% set authors = contributors|sort(attribute='last_name') %}
+                        {% if authors %}
+                          <dt>Authors</dt>
+                          {% for author in authors %}
+                          <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
+                              <span typeof="foaf:Person">
+                              <span class="p-name fn" property="foaf:lastName">{{ author.last_name }}</span>
+                              <span class="p-name fn" property="foaf:firstName">{{ author.first_name }}</span>
+                              {% if author.affiliation.website and author.affiliation.name %}
+                              - <a href="{{ author.affiliation.website }}" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">{{ author.affiliation.name }}</a>
+                              {% elif author.affiliation.name %}
+                              - <span class="p-org org h-org h-card">{{ author.affiliation.name }}</span>
+                              {% endif %}
+                							{% if author.email %}
+                               - <span class="ed_mailto"><a href="mailto:{{ author.email }}" rel="foaf:mbox" class="u-email email">{{ author.email }}</a></span>
+                              {% endif %}
+                              </span>
+                          </dd>
+                          {% endfor %}
+                        {% endif %}
+                      {% elif role == "E" %}
+                        {% set editors = contributors|sort(attribute='last_name') %}
+                        {% if editors %}
+                          <dt>Editors</dt>
+                          {% for editor in editors %}
+                          <dd inlist="" rel="bibo:editor" class="p-author h-card vcard">
+                              <span typeof="foaf:Person">
+                              <span class="p-name fn" property="foaf:lastName">{{ editor.last_name }}</span>,
+                              <span class="p-name fn" property="foaf:firstName">{{ editor.first_name }}</span>
+                              {% if editor.affiliation.website and editor.affiliation.name %}
+                                 - <a href="{{ editor.affiliation.website }}" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">{{ editor.affiliation.name }}</a>
+                              {% elif editor.affiliation.name %}
+                                 - <span class="p-org org h-org h-card">{{ editor.affiliation.name }}</span>
+                              {% endif %}
+                							{% if editor.email %}
+                                 - <span class="ed_mailto"><a href="mailto:{{ editor.email }}" rel="foaf:mbox" class="u-email email">{{ editor.email }}</a></span>
+                              {% endif %}
+                							</span>
+                          </dd>
+                        {% endfor %}
+                        {% endif %}
+                      {% elif role == "C" %}
+                        {% set pure_contributors = contributors|sort(attribute='last_name') %}
+                        {% if pure_contributors %}
+                        <dt>Reviewed and approved by</dt>
+                          {% for contributor in pure_contributors %}
+                          <dd inlist="" rel="dcterms:contributor" class="p-author h-card vcard">
+                              <span typeof="foaf:Person">
+                              <span class="p-name fn" property="foaf:lastName">{{ contributor.last_name }}</span>,
+                              <span class="p-name fn" property="foaf:firstName">{{ contributor.first_name }}</span>
+                              {% if contributor.affiliation.website and contributor.affiliation.name %}
+                              - <a href="{{ contributor.affiliation.website }}" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">{{ contributor.affiliation.name }}</a>
+                              {% elif contributor.affiliation.name %}
+                              - <span class="p-org org h-org h-card">{{ contributor.affiliation.name }}</span>
+                              {% endif %}
+                							{% if contributor.email %}
+                               - <span class="ed_mailto"><a href="mailto:{{ contributor.email }}" rel="foaf:mbox" class="u-email email">{{ contributor.email }}</a></span>
+                              {% endif %}
+							                </span>
+                          </dd>
+                            {% endfor %}
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                </dl>
+              </div>
+
+              <div class="head" role="metainfo" id="metainfo">
+              <dl>
+              <!--<dt>Source</dt><dd><br></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="{{metadata.changelogurl}}">{{metadata.changelogurl}}</a></dd>-->
+              <dt>Feedback</dt><dd><a href="{{metadata.feedbackurl}}">{{metadata.feedbackurl}}</a></dd>
+              <!--<dt>Registry of standards</dt><dd><a href="{{metadata.standaardregisterurl}}">{{metadata.standaardregisterurl}}</a></dd>-->
+
+              <!--<dt>Dependencies</dt><dd>
+                {% for dep in metadata.dependencies %}
+		<a href="{{ dep.packageurl }}">{{ dep.packagelabel }}</a>
+                {% endfor %}
+		</dd>-->
+              </dl>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
+      <div class="layout layout--wide">
+        <div class="grid">
+          <div class="col--8-12 col--12-12--s">
+
+			<div class="region region--no-space-top typography" id="status">
+              <section class="introductory" id="sotd" typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
+                {% block status %}
+                <p>
+                  This model has the status of Draft published on {{ metadata.issued }}.
+	        </p>
+                {% endblock %}
+              </section>
+            </div>
+			
+            <div class="region region--no-space-top typography" id="summary">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Summary</h2>
+		<!--{% block introduction %}
+		<p>This document describes the <strong>{{ metadata.title }}</strong>.</p>
+                {% endblock %}-->
+                {% block summary %} 
+                  {% if metadata.description %} 
+                    {{ metadata.description[language] }}
+                  {% endif %} 
+                {% endblock %}
+            </div>
+
+            <div class="region region--no-space-top typography" id="conformance">
+              <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformance</h2>
+              {% block conformance %}
+              <p>To be defined</p>
+              {% endblock %}
+            <!--<div class="region region--no-space-top typography" id="license">
+              <h2 class="h2">License</h2>
+              {% block license %}
+              <p><span rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text" xmlns:dct="http://purl.org/dc/terms/">This specification</span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION</a> is published under <a href="{{ metadata.license }}" rel="license">"CC0"</a>.</p>
+              {% endblock %}
+            </div>
+            -->
+            </div>
+            <div class="region region--no-space-top" id="overview">
+              <h2 class="h2">Overview</h2>
+              <div class="grid">
+                <div class="col--9-12 col--1-1--s typography">
+                  {% if ( ( classes | length > 0)   ) %}
+                  <div class="region region--no-space-top">
+                    <p>This document describes the usage of the following entities for a correct usage of the data model: 
+                      <br />
+                      |
+                      {%- for class in classes |sort(attribute=sortattr) %}
+                      <a href="#{{ class.name }}">{{ class.label[language] }}</a> |
+                      {%- endfor %}
+                    </p>
+                  </div>
+                  {% endif %}
+		  {% if ( ( datatypes | length ) > 0 ) %}
+                  <div class="region region--no-space-top">
+                    <p> This document describes the usage of the following datatypes for a correct usage of the Core Vocabulary:
+                      <br />
+                      |
+                      {%- for datatype in datatypes |sort(attribute=sortattr) %}
+                      <a href="#{{ datatype.name }}">{{ datatype.label[language] }}</a> |
+                      {%- endfor %}
+                    </p>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <div class="region region--no-space-top">
+              <a href="./html/overview.jpg" target="_blank">
+                 <img src="./html/overview.jpg" />
+              </a>
+            </div>
+            <div class="region region--no-space-top">
+              <h2 class="h2">Entities</h2>
+            </div>
+            {% for entity in classes | sort(attribute=sortattr) %}
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="{{ entity.name }}"><a href="{{ entity.uri }}" data-toggle="tooltip" data-content="{{ entity.uri }}" data-placement="right">{{ entity.label[language] }}</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>{{ entity.description[language] }}</dd>
+                    {% if entity.usage[language] %}
+                    <dt>Usage</dt><dd>{{ entity.usage[language] | safe }}</dd>
+                    {% endif %}
+		    {% if ((entity.parents | length) > 0 ) %} 
+		    <dt>Subclass of<dt><dd>
+                        {%- for parent in entity['parents'] %}
+                        <a href="{{ parent.scoped_uri}}">{{ parent.label }}</a>{% if not loop.last %}, {% endif %}
+                    	{%- endfor %}
+		   </dd>
+                    {% endif %}
+                    <dt>Properties</dt>
+		    {% if ((entity.properties | length) > 0 ) %} 
+                    <dd>For this entity the following properties are defined:
+                    {%- for prop in entity['properties'] | sort(attribute=sortattr) %}
+                      <a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
+                    {%- endfor %}.</dd>
+                    {% else %}
+                    <dd>No properties have been defined for this entity.</dd>
+                    {% endif %}
+                  </dl>
+                </div>
+		{% if ((entity.properties | length) > 0 ) %} 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+			<th class="data-table__header-title--sortable">Cardinality</th>
+                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    {% for prop in entity['properties'] | sort(attribute=sortattr) %}
+                      <tr id="{{ (entity.name ~ ':' ~ prop.name) | urlencode }}" typeof="rdfs:Property" resource="{{ prop.uri }}">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="{{ prop.uri }}" data-toggle="tooltip" data-content="{{ prop.uri }}" data-placement="right">
+                            {{ prop.label[language] }}</a>
+                          </code>
+                        </td>
+                        <td>
+                          {% for range in prop.scopedrange %}
+			    {% if range['range_uri'] == range['range_puri'] %} 
+			    <a href="{{ range['range_uri'] }}" data-toggle="tooltip" data-content="{{ range['range_puri'] }}" data-placement="right">{{ range['range_label'][language] }}</a>
+                            {% else %}
+			    <a href="{{ range['range_uri'] }}" data-placement="right">{{ range['range_label'][language] }}</a>
+			    {% endif %}
+                          {% endfor %}
+                        </td>
+			<td>{{ prop.cardinality }}</td>
+                        <td property="rdfs:comment">{{ prop.description[language] }}</td>
+                        <td property="skos:scopeNote">{{ prop.usage[language] | safe }}</td>
+                        <td>{{ prop['codelist_uri'] | safe }}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+      			  {% endif %}
+            </div>
+            {% endfor %}
+
+            {% if ( ( datatypes | length ) > 0 ) %}
+            <div class="region region--no-space-top">
+              <h2 class="h2">Datatypes</h2>
+            </div>
+            {% for entity in datatypes | sort(attribute=sortattr)%}
+            <div class="region region--no-space-top">
+              {% if entity.scopeduri %}
+              <h3 class="h3" id="{{ entity.name }}"><a href="{{ entity.scopeduri }}" data-toggle="tooltip" data-content="{{ entity.uri }}" data-placement="right">{{ entity.label[language] }}</a></h3>
+	      {% else %}
+              <h3 class="h3" id="{{ entity.name }}"><a href="{{ entity.uri }}" data-toggle="tooltip" data-content="{{ entity.uri }}" data-placement="right">{{ entity.label[language] }}</a></h3>
+	      {% endif %}
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>{{ entity.description[language] }}</dd>
+                    {% if entity.usage[language] %}
+                    <dt>Usage</dt><dd>{{ entity.usage[language] | safe }}</dd>
+                    {% endif %}
+		    {% if ((entity.parents | length) > 0 ) %} 
+		    <dt>Subclass of <dt><dd>
+                        {%- for parent in entity['parents'] %}
+                        <a href="{{ parent.scoped_uri}}">{{ parent.label }}</a>{% if not loop.last %}, {% endif %}
+                    	{%- endfor %}
+		   </dd>
+                    {% endif %}
+                    <dt>Properties</dt>
+		    {% if ((entity.properties | length) > 0 ) %} 
+                    <dd>we have defined the following properties for this datatype:
+                    {%- for prop in entity['properties'] | sort(attribute=sortattr) %}
+                      <a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
+                    {%- endfor %}.</dd>
+                    {% else %}
+                    <dd>There are no properties defined for this datatype.</dd>
+                    {% endif %}
+                  </dl>
+                </div>
+		{% if ((entity.properties | length) > 0 ) %} 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expects Type</th>
+			<th class="data-table__header-title--sortable">Cardinality</th>
+                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                      {% for prop in entity['properties'] | sort(attribute=sortattr) %}
+                      <tr id="{{ (entity.name ~ ':' ~ prop.name ) | urlencode }}" typeof="rdfs:Property" resource="{{ prop.uri }}">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="{{ prop.uri }}" data-toggle="tooltip" data-content="{{ prop.uri }}" data-placement="right">{{ prop.label[language] }}</a>
+                          </code>
+                        </td>
+                        <td>
+                          {% for range in prop.scopedrange %}
+			    {% if range['range_uri'] == range['range_puri'] %} 
+			    <a href="{{ range['range_uri'] }}" data-toggle="tooltip" data-content="{{ range['range_puri'] }}" data-placement="right">{{ range['range_label'][language] }}</a>
+                            {% else %}
+			    <a href="{{ range['range_uri'] }}" data-placement="right">{{ range['range_label'][language] }}</a>
+			    {% endif %}
+                          {% endfor %}
+                        </td>
+			<td>{{ prop['cardinality'] }}</td>
+                        <td property="rdfs:comment">{{ prop.description[language] }}</td>
+                        <td property="skos:scopeNote">{{ prop.usage[language] | safe }}</td>
+                        <td>{% if prop['codelist_uri'] %}<a href="{{ prop['codelist_uri'] }}">Link</a>{% endif %}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            {% endif %}
+	    
+	    <!--
+	    {% block examples %}
+	    <div class="region region--no-space-top" id="examples">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Examples</h2>
+                (non-normative)
+                
+		</br>
+		<p>placeholder</p>
+                
+            </div>
+	    {% endblock %}
+	    -->
+	    <div class="region region--no-space-top" id="codelists">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Lists</h2>
+                (non-normative)
+                
+                {% block codelist %}
+				{% endblock %}
+            </div>
+		
+	    <div class="region region--no-space-top" id="changelog">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Changelog w.r.t. previous version</h2>
+                (non-normative)
+                {% block changelog %}
+		</br>
+		<p>placeholder</p>
+                {% endblock %}
+            </div>
+	    
+            <div class="region region--no-space-top" id="jsonld">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
+                (non-normative)
+                {% block jsonld %}
+		<p>A reusable JSON-LD context definition is retrievable at: <a href="https://belgif.github.io/thematic/models/building/context/{{ metadata.filename }}_{{language}}.jsonld" target="_blank">https://belgif.github.io/thematic/models/building/context/{{ metadata.filename }}_{{language}}.jsonld</a></p>
+                {% endblock %}
+            </div>
+
+            <div class="region region--no-space-top" id="shacl">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">SHACL template</h2>
+                (non-normative)
+                {% block shacl%}
+		<p>A reusable SHACL template is retrievable at: <a href="https://belgif.github.io/thematic/models/building/context//shacl/{{ metadata.filename }}_{{language}}-SHACL.ttl" target="_blank">https://belgif.github.io/thematic/models/building//shacl/{{ metadata.filename }}_{{language}}-SHACL.ttl</a></p>
+                {% endblock %}
+            </div>
+
+          </div>
+          <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m" id="sideNav">
+              <nav class="side-navigation js-sticky region" id="sideNav">
+                  <div class="side-navigation__content js-scrollspy">
+                      <div class="side-navigation__group">
+                          <ul>
+						      <li class="side-navigation__item">
+                                  <a href="#status">Status of this document</a>
+                              </li>
+                              <li class="side-navigation__item">
+                                  <a href="#summary">Summary</a>
+                              </li>
+                              <!--
+			      <li class="side-navigation__item">
+                                  <a href="#license">License</a>
+                              </li>
+			      -->
+                              <li class="side-navigation__item">
+                                  <a href="#conformance">Conformance</a>
+                              </li>
+                              <li class="side-navigation__item">
+                                  <a href="#overview">Overview</a>
+                              </li>
+			      <!--
+			      <li class="side-navigation__item">
+                                  <a href="#examples">Examples</a>
+			      -->
+							<li class="side-navigation__item">
+                                  <a href="#codelists">Lists</a>
+							</li>
+							<li class="side-navigation__item">
+                                  <a href="#changelog">Changelog</a>
+                              </li>
+                              <li class="side-navigation__item">
+                                  <a href="#jsonld">JSON-LD Context</a>
+                              </li>
+
+                              <li class="side-navigation__item">
+                                  <a href="#shacl">SHACL template</a>
+                              </li>
+
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
+          </div>
+    <!-- End page content -->
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+  <script type="text/javascript">
+      function iframeLoaded() {
+         var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+  </script> 
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+  <style>
+    @media screen {  /* hide from IE3 */
+      a[href]:hover { background: #ffa }
+    }
+    p {
+      text-align: justify;
+    }
+    tr:nth-child(even) td     { background-color:#eee; }
+    dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+    dt { font-weight: bold }
+    pre, code { font-family: monospace } /* navigator 4 requires this */
+    em {
+          font-style: italic;
+    }
+    img {
+       width: 100%;
+    }
+    .tooltip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 800;
+      display: none;
+      max-width: 128rem;
+      background: #fff;
+      border: 1px solid #ccc;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.4rem;
+      color: #000;
+      background-clip: padding-box;
+    }
+    .logo {
+      content: url("html/icon.png");
+      height: 20%;
+      min-width: 10px;
+      min-height: 10px;
+      position:absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .header {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+    html, h1, h2, h3, h4, code {
+      font-family: "Arial" !important;
+    }
+	.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+	  color: #454545;
+	}
+  </style>
+</body>
+</html>
