@@ -1,8 +1,8 @@
 [  {
-    "dummy": "geert24",
+    "dummy": "geert25",
     "urlref": "/doc/iceg/person",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
-    "branchtag": "master",
+    "branchtag": "628a650",
     "name": "iceg-person",
     "filename": "config/iceg-person.json",
     "navigation": {}
