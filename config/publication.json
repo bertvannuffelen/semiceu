@@ -8,6 +8,15 @@
     "navigation": {}
   },
   {
+    "dummy": "geert01",
+    "urlref": "/doc/iceg/person",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-person-voc",
+    "filename": "config/iceg-person.json",
+    "navigation": {}
+  },
+  {
     "dummy": "christophe-48",
     "urlref": "/doc/iceg/public-service",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
