@@ -9,7 +9,7 @@
   },
   {
     "dummy": "geert01",
-    "urlref": "/doc/iceg/person",
+    "urlref": "/doc/iceg/person-voc",
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
     "name": "iceg-person-voc",
