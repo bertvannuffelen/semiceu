@@ -485,7 +485,7 @@ jobs:
       - run:
           name: update and add extra statements of updating the ssh config for each private ssh key
           command: |
-            $PWD/scripts/update_sshconfig.sh <<parameters.repository>
+            $PWD/scripts/update_sshconfig.sh <<parameters.repository>>
       - run:
           name: Checkout target repo
           workdir: /tmp
