@@ -1,0 +1,118 @@
+[  {
+    "dummy": "geert30",
+    "urlref": "/doc/iceg/person",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-person-ap",
+    "filename": "config/iceg-person.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "geert02",
+    "urlref": "/doc/iceg/person-voc",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-person-voc",
+    "filename": "config/iceg-person.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "christophe-48",
+    "urlref": "/doc/iceg/public-service",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-public-service",
+    "filename": "config/iceg-public-service.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "emidio-37",
+    "urlref": "/doc/iceg/building",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-building",
+    "filename": "config/iceg-building.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "christophe-58",
+    "urlref": "/doc/iceg/public-organisation",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-public-organisation",
+    "filename": "config/iceg-public-organisation.json",
+    "navigation": {}
+  }, 
+  {
+    "dummy": "maxime-22",
+    "urlref": "/doc/sdg",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "sdg",
+    "filename": "config/sdg.json",
+    "navigation": {}
+  }, 
+  {
+    "dummy": "19",
+    "urlref": "/doc/vocabularium/cccev-voc",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "cccev",
+    "filename": "config/cccev.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "18",
+    "urlref": "/doc/core-vocabulary/cccev",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "cccev-ap",
+    "filename": "config/cccev.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-16",
+    "urlref": "/doc/application-profile/cpsv-ap",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "cpsv-ap",
+    "filename": "config/cpsv-ap.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-22",
+    "urlref": "/doc/core-vocabulary/core-public-organisation",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-public-organisation-ap",
+    "filename": "config/core-public-organisation.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-22",
+    "urlref": "/doc/core-vocabulary/core-location",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-location-ap",
+    "filename": "config/core-location.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-22",
+    "urlref": "/doc/core-vocabulary/core-business",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-business-ap",
+    "filename": "config/core-business.json",
+    "navigation": {}
+  },
+  {
+    "dummy": "dimi-28",
+    "urlref": "/doc/core-vocabulary/core-person",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "core-person-ap",
+    "filename": "config/core-person.json",
+    "navigation": {}
+  }
+]

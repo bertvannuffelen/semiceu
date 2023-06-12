@@ -1,0 +1,20 @@
+{
+  "primeLanguage": "en",
+  "otherLanguages": [
+    "fr", "nl"
+  ],
+  "hostname": "https://vocab.belgif.be/",
+  "domain": "vocab.belgif.be",
+  "publicationpoints" : ["dev"],
+  "generatedrepository" : {
+	  "organisation": "bertvannuffelen",
+	  "repository" : "semiceu-generated",
+	  "private" : false
+  },
+  "toolchainversion" : "3.0.6",
+  "toolchain" : {
+	  "strickness" : "lazy",
+	  "version": 3,
+	  "triggerall" : true
+  }
+}
