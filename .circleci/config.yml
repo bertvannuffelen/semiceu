@@ -540,8 +540,8 @@ jobs:
           name: Push results to github
           workdir: /tmp/generated
           command: |
+            git config user.email "semiceu@semic.eu"
             git config user.name "Circle CI Builder"
-            git config user.name "$$GITUSERNAME"
             git add .
             git status
             git commit -m "Applying changes from commit ${CIRCLE_SHA1}" --allow-empty
