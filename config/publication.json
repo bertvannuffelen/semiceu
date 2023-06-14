@@ -114,5 +114,14 @@
     "name": "core-person-ap",
     "filename": "config/core-person.json",
     "navigation": {}
+  },
+  {
+    "dummy": "emidio-1",
+    "urlref": "/doc/iceg/hydrants",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-hydrants",
+    "filename": "config/iceg-hydrants.json",
+    "navigation": {}
   }
 ]
