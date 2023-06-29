@@ -124,7 +124,7 @@
                       {% elif role == "C" %}
                         {% set pure_contributors = contributors|sort(attribute='last_name') %}
                         {% if pure_contributors %}
-                        <dt>Reviewed and approved by</dt>
+                        <dt>Reviewed by</dt>
                           {% for contributor in pure_contributors %}
                           <dd inlist="" rel="dcterms:contributor" class="p-author h-card vcard">
                               <span typeof="foaf:Person">
@@ -185,23 +185,29 @@
               </section>
             </div>
 			
+			<!--
             <div class="region region--no-space-top typography" id="summary">
-                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Summary</h2>
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Summary</h2>-->
+				
 		<!--{% block introduction %}
 		<p>This document describes the <strong>{{ metadata.title }}</strong>.</p>
                 {% endblock %}-->
-                {% block summary %} 
+				
+                <!--{% block summary %} 
                   {% if metadata.description %} 
                     {{ metadata.description[language] }}
                   {% endif %} 
                 {% endblock %}
-            </div>
-
+            </div>-->
+			
+			<!--
             <div class="region region--no-space-top typography" id="conformance">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformance</h2>
               {% block conformance %}
               <p>To be defined</p>
               {% endblock %}
+			</div>
+			  -->
             <!--<div class="region region--no-space-top typography" id="license">
               <h2 class="h2">License</h2>
               {% block license %}
@@ -209,7 +215,7 @@
               {% endblock %}
             </div>
             -->
-            </div>
+            
             <div class="region region--no-space-top" id="overview">
               <h2 class="h2">Overview</h2>
               <div class="grid">
@@ -454,17 +460,18 @@
 						      <li class="side-navigation__item">
                                   <a href="#status">Status of this document</a>
                               </li>
+							  <!--
                               <li class="side-navigation__item">
                                   <a href="#summary">Summary</a>
                               </li>
-                              <!--
 			      <li class="side-navigation__item">
                                   <a href="#license">License</a>
                               </li>
-			      -->
+			      
                               <li class="side-navigation__item">
                                   <a href="#conformance">Conformance</a>
                               </li>
+							  -->
                               <li class="side-navigation__item">
                                   <a href="#overview">Overview</a>
                               </li>
