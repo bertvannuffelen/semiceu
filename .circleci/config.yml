@@ -233,7 +233,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            gem install linkeddata
+            gem install linkeddata -v 3.2.2
             mkdir -p /tmp/workspace/target
       - run:
           name: Convert -SHACL.jsonld file to -SHACL.ttl files
@@ -303,7 +303,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            gem install linkeddata
+            gem install linkeddata -v 3.2.2
             mkdir -p /tmp/workspace/target/doc/vocabularium
       - run:
           name: touch a file
