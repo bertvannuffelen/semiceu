@@ -225,7 +225,7 @@ jobs:
             - report/
   convert-json-to-ttl:
     docker:
-      - image: circleci/ruby:2.7.5-bullseye
+      - image: cimg/ruby:3.2.2
     steps:
       - checkout
       - attach_workspace:
@@ -233,7 +233,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            gem install linkeddata -v 3.2.2
+            gem install linkeddata
             mkdir -p /tmp/workspace/target
       - run:
           name: Convert -SHACL.jsonld file to -SHACL.ttl files
@@ -295,7 +295,7 @@ jobs:
             - target/
   render-voc-rdf:
     docker:
-      - image: circleci/ruby:2.7.5-bullseye
+      - image: cimg/ruby:3.2.2
     steps:
       - checkout
       - attach_workspace:
@@ -303,7 +303,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            gem install linkeddata -v 3.2.2
+            gem install linkeddata
             mkdir -p /tmp/workspace/target/doc/vocabularium
       - run:
           name: touch a file
